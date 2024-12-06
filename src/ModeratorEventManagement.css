@@ -1,0 +1,180 @@
+/* Scoped styles for the moderator section */
+.moderator-section {
+  width: 80%;
+  margin-left: 280px;
+  margin-top: 150px;
+  padding: 20px;
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Scoped styles for the table inside the moderator section */
+.moderator-section .moderator-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Scoped styles for buttons inside the moderator-table */
+.moderator-section .moderator-table button.view-button {
+  background-color: #373e46;
+  color: white;
+  width: 50%;
+}
+
+.moderator-section .moderator-table button.view-button:hover {
+  background-color: #3e4247; /* Darker blue */
+}
+
+.moderator-section .moderator-table button.suspend-button {
+  background-color: #dc3545; /* Red */
+  color: white;
+  width: 50%;
+}
+
+.moderator-section .moderator-table button.suspend-button:hover {
+  background-color: #c82333; /* Darker red */
+}
+
+/* Scoped styles for the activate button */
+.moderator-section .moderator-table button.activate-button {
+  background-color: #28a745; /* Green */
+  color: white;
+  width: 50%;
+}
+
+.moderator-section .moderator-table button.activate-button:hover {
+  background-color: #218838; /* Darker green */
+}
+
+/* Grey button when event is suspended */
+.moderator-section .moderator-table button.suspend-button:disabled,
+.moderator-section .moderator-table button.activate-button:disabled {
+  background-color: #6c757d; /* Grey */
+  color: white;
+  cursor: not-allowed;
+}
+
+/* Scoped styles for suspended state */
+.moderator-section .moderator-table button.suspended {
+  background-color: #6c757d; /* Grey to indicate suspended state */
+  color: white;
+  cursor: not-allowed;
+}
+
+.moderator-section .moderator-table button.suspended:hover {
+  background-color: #6c757d; /* Maintain the grey color */
+}
+
+/* Scoped styles for the sidebar */
+.moderator-section .sidebar {
+  width: 220px;
+  background-color: #f5f5f5;
+  margin-top: 10px;
+  height: 55%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Scoped styles for the navbar inside the moderator section */
+.moderator-section .moderator-navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color:#a5aaad;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.moderator-section .moderator-navbar h2 {
+  margin: 0;
+}
+
+.moderator-section .moderator-navbar .profile-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-left: 1200px;
+}
+
+.moderator-section .moderator-navbar .logout-button {
+  padding: 10px 20px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* ============================= */
+/* Responsive Design */
+
+/* For screens smaller than 768px (tablets and below) */
+@media (max-width: 768px) {
+  .moderator-section {
+    width: 100%; /* Take full width on smaller screens */
+    margin-left: 0; /* Remove left margin */
+    margin-top: 20px; /* Reduced top margin */
+    padding: 10px; /* Reduce padding */
+  }
+
+  .moderator-section .moderator-table button.view-button,
+  .moderator-section .moderator-table button.suspend-button,
+  .moderator-section .moderator-table button.activate-button {
+    width: 100%; /* Make buttons stack vertically */
+    margin-bottom: 10px; /* Add space between buttons */
+  }
+
+  /* Stack the sidebar below the main content on small screens */
+  .moderator-section .sidebar {
+    width: 100%; /* Sidebar takes full width */
+    height: auto; /* Let it adjust based on content */
+    margin-top: 20px; /* Add margin to space it out */
+  }
+
+  .moderator-section .moderator-navbar {
+    flex-direction: column; /* Stack navbar items */
+    align-items: flex-start; /* Align to the left */
+    margin-bottom: 10px; /* Space between navbar and content */
+  }
+
+  .moderator-section .moderator-navbar .profile-button {
+    margin-left: 0; /* Remove the left margin */
+    margin-bottom: 10px; /* Add space between buttons */
+  }
+
+  .moderator-section .moderator-navbar .logout-button {
+    margin-left: 0; /* Remove the left margin */
+  }
+}
+
+/* For screens smaller than 480px (mobile devices) */
+@media (max-width: 480px) {
+  .moderator-section .moderator-table button.view-button,
+  .moderator-section .moderator-table button.suspend-button,
+  .moderator-section .moderator-table button.activate-button {
+    width: 100%; /* Make buttons take full width */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .moderator-section .sidebar {
+    width: 100%; /* Full width sidebar */
+    height: auto; /* Let sidebar height be dynamic */
+  }
+
+  .moderator-section .moderator-navbar {
+    flex-direction: column; /* Stack navbar items vertically */
+    align-items: stretch; /* Stretch buttons to full width */
+  }
+
+  .moderator-section .moderator-navbar .profile-button,
+  .moderator-section .moderator-navbar .logout-button {
+    width: 100%; /* Full-width buttons */
+    margin-bottom: 10px; /* Space between buttons */
+  }
+}
